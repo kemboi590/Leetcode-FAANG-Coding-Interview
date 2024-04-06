@@ -16,7 +16,7 @@
             const partitionY = ((x + y + 1) >> 1) - partitionX; // gets the partition of Y based on partition of X
             
             const maxLeftX = partitionX === 0 ? -Infinity : nums1[partitionX - 1]; // if partitionX is 0, then there is nothing on the left side, so set to -Infinity else set to the value at partitionX - 1, partitionX - 1 means the value to the left of the partition
-            const minRightX = partitionX === x ? Infinity : nums1[partitionX];
+            const minRightX = partitionX === x ? Infinity : nums1[partitionX]; // partitionX === x means there is nothing on the right side, so set to Infinity else set to the value at partitionX
             
             const maxLeftY = partitionY === 0 ? -Infinity : nums2[partitionY - 1];
             const minRightY = partitionY === y ? Infinity : nums2[partitionY];
